@@ -48,6 +48,7 @@ setup(
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
+        'six',
         'z3c.jbot',
         'Products.GenericSetup>=1.8.2',
         'plone.api>=1.8.4',
@@ -73,5 +74,7 @@ setup(
     target = plone
     [console_scripts]
     update_locale = collective.splitsitemap.locales.update:update_locale
+    [zopectl.command]
+    generate_sitemaps = collective.splitsitemap.scripts.generate_sitemaps:entrypoint
     """,
 )

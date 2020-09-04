@@ -5,4 +5,6 @@
 
 <!-- -*- extra stuff goes here -*- -->
 
+  <records interface="collective.splitsitemap.interfaces.ISplitSitemapSettings" />
+
 </registry>

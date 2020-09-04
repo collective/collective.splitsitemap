@@ -18,4 +18,20 @@
       directory="static"
       />
 
+  <browser:page
+    name="splitsitemap-settings"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".controlpanel.SitemapControlPanelView"
+    permission="cmf.ManagePortal"
+    layer="collective.splitsitemap.interfaces.ICollectiveSplitsitemapLayer"
+    />
+
+  <browser:page
+    name="sitemap.xml.gz"
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    class=".sitemap.SiteMapView"
+    permission="zope2.Public"
+    layer="collective.splitsitemap.interfaces.ICollectiveSplitsitemapLayer"
+    />
+
 </configure>
