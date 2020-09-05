@@ -114,7 +114,7 @@ class SiteMapView(BrowserView):
 
         split_sitemap = sitemap_n and total_items and True or False
 
-        for item in catalog.searchResults(query, **keywords):
+        for item in catalog.searchResults(query, Language='all', **keywords):
             key = item.getURL().rsplit("/", 1)[0]
             value = (item.modified.micros(), item.modified.ISO8601())
             default_page_modified[key] = value
@@ -147,7 +147,7 @@ class SiteMapView(BrowserView):
             to_skip += (sitemap_n - 1) * total_items
 
         query["is_default_page"] = False
-        for item in catalog.searchResults(query, **keywords):
+        for item in catalog.searchResults(query, Language='all', **keywords):
             loc = item.getURL()
             ignore_item = False
             if self.settings.ignored_paths:
@@ -213,7 +213,7 @@ class SiteMapView(BrowserView):
                 if pt not in self.settings.ignored_types:
                     query["portal_type"].append(pt)
 
-            catalogued_items = catalog(query)
+            catalogued_items = catalog(query, Language='all')
             num_cat_items = len(catalogued_items)
 
             if self.settings.ignored_paths:
@@ -223,7 +223,7 @@ class SiteMapView(BrowserView):
                             "/".join(self.context.getPhysicalPath()),
                             ignore_path[:-3],
                         )
-                        catalogued_items = catalog(query)
+                        catalogued_items = catalog(query, Language='all')
                         num_cat_items -= len(catalogued_items)
 
                     else:
@@ -232,7 +232,7 @@ class SiteMapView(BrowserView):
                             % ("/".join(self.context.getPhysicalPath()), ignore_path),
                             "depth": 0,
                         }
-                        catalogued_items = catalog(query)
+                        catalogued_items = catalog(query, Language='all')
                         num_cat_items -= len(catalogued_items)
 
             logger.info("Number of items to include in sitemap: %s" % num_cat_items)
