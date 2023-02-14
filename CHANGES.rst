@@ -5,7 +5,8 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove the requirement for Python 2.7
+  [cillianderoiste]
 
 
 1.0.0 (2020-09-25)
