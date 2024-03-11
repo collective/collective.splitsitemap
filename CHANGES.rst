@@ -2,13 +2,7 @@ Changelog
 =========
 
 
-1.1.1 (unreleased)
-------------------
-
-- Nothing changed yet.
-
-
-1.1.0 (2023-02-14)
+1.1.0 (unreleased)
 ------------------
 
 - Remove the requirement for Python 2.7
