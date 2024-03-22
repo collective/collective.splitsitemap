@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.splitsitemap',
-    version='1.0.1.dev0',
+    version='1.1.0.dev0',
     description="An add-on for Plone",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
@@ -25,6 +25,7 @@ setup(
         "Framework :: Plone :: 4.3",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
@@ -44,7 +45,6 @@ setup(
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
-    python_requires="==2.7",
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
