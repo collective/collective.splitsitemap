@@ -5,6 +5,7 @@ from collective.splitsitemap.interfaces import ISplitSitemapSettings
 from gzip import GzipFile
 from persistent.mapping import PersistentMapping
 from plone.memoize import ram
+from plone.protect.interfaces import IDisableCSRFProtection
 from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces import IPloneSiteRoot
@@ -14,6 +15,7 @@ from six import BytesIO
 from time import time
 from zope.annotation import IAnnotations
 from zope.component import getUtility
+from zope.interface import alsoProvides
 from zope.publisher.interfaces import NotFound
 
 import logging
@@ -195,6 +197,8 @@ class SiteMapView(BrowserView):
 
     def _generate(self, items=None):
         """Generates the Gzipped sitemap."""
+        alsoProvides(self.request, IDisableCSRFProtection)
+
         results = ""
         ctx_path = "/".join(self.context.getPhysicalPath())
         logger.info("Generating sitemap.xml.gz for %s" % ctx_path)
