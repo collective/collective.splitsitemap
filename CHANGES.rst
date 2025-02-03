@@ -5,7 +5,8 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Allow safe writes in for the sitemap.xml.gz request
+  [erral]
 
 
 1.1.0 (2024-03-23)
