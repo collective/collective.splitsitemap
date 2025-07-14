@@ -26,7 +26,9 @@ log.html
 output.xml
 pip-selfcheck.json
 report.html
-.vscode/
 .tox/
 reports/
 # excludes
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
