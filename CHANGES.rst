@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.1 (unreleased)
+1.1.1 (2025-07-14)
 ------------------
 
 - Allow safe writes in for the sitemap.xml.gz request
