@@ -47,9 +47,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        # -*- Extra requirements: -*-
         'six',
-        'z3c.jbot',
         'Products.GenericSetup>=1.8.2',
         'plone.schema',
     ],
