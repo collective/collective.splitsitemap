@@ -5,7 +5,8 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Extend the uninstall profile.
+  [thet]
 
 
 1.1.1 (2025-07-14)
