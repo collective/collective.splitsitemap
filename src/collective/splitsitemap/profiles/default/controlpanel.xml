@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <object name="portal_controlpanel" meta_type="Plone Control Panel Tool">
   <configlet title="Split Sitemap Settings" action_id="SitemapSettings"
     appId="collective.splitsitemap.settings" category="Products"
