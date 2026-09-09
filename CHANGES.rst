@@ -8,6 +8,9 @@ Changelog
 - Extend the uninstall profile.
   [thet]
 
+- Remove dead code.
+  [thet]
+
 
 1.1.1 (2025-07-14)
 ------------------
