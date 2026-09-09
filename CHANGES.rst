@@ -5,6 +5,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
+- Extend the uninstall profile.
+  [thet]
+
 - Remove dead code.
   [thet]
 
